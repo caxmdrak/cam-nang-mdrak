@@ -223,7 +223,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 @media (min-width:600px) and (max-width:959px){
   .layout,.extras,.footer{max-width:720px;margin-left:auto;margin-right:auto}
   .layout{margin-top:-50px}
-  .tiles{grid-template-columns:repeat(4,1fr)}
+  .tiles{grid-template-columns:repeat(3,1fr)}
   body.has-proc .layout{max-width:none}
   body.has-proc .proc{max-width:720px;margin:0 auto;border-radius:0 0 24px 24px}
 }
@@ -258,7 +258,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   .extras{margin:20px 0 0;grid-template-columns:1.25fr 1fr;align-items:start}
   .extras .stack{display:grid;gap:16px}
   .footer{margin:20px 0 0;display:grid;grid-template-columns:1fr 2fr;gap:24px;align-items:center}
-  .footer ul{margin:0;grid-template-columns:repeat(3,auto);justify-content:end;gap:8px 28px}
+  .footer ul{margin:0;grid-template-columns:repeat(2,auto);justify-content:end;gap:8px 28px}
   .copy{grid-column:1/-1;margin:0}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
@@ -270,12 +270,10 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-bike" viewBox="0 0 24 24"><circle cx="5.5" cy="17" r="3.5"/><circle cx="18.5" cy="17" r="3.5"/><path d="M5.5 17h5l3.5-8h3l1.5 8"/><path d="M8 9h4l2 4"/><path d="M15 5h2.5"/></symbol>
   <symbol id="i-id" viewBox="0 0 24 24"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><circle cx="8.5" cy="11" r="2.2"/><path d="M5 16.5c.6-1.6 2-2.5 3.5-2.5s2.9.9 3.5 2.5"/><path d="M14.5 9.5h4M14.5 13h4"/></symbol>
-  <symbol id="i-bed" viewBox="0 0 24 24"><path d="M3 5v15"/><path d="M3 9h15a3 3 0 0 1 3 3v8"/><path d="M3 16h18"/><path d="M7 9v7"/></symbol>
-  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3.5l9 7"/><path d="M5 9v11h14V9"/><path d="M10 20v-6h4v6"/></symbol>
-  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3 2.5 8 12 13l9.5-5z"/><path d="m2.5 12.5 9.5 5 9.5-5"/><path d="m2.5 16.5 9.5 5 9.5-5"/></symbol>
   <symbol id="i-undo" viewBox="0 0 24 24"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1L3.5 8.5"/><path d="M3.5 3.5v5h5"/></symbol>
-  <symbol id="i-filecheck" viewBox="0 0 24 24"><path d="M14 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V8z"/><path d="M14 2.5V8h5.5"/><path d="m9 15 2 2 4-4"/></symbol>
-  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="17" rx="2.5"/><path d="M16 2.5v4M8 2.5v4M3 10h18"/><path d="M8 14h2M14 14h2M8 17.5h2"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h14"/><path d="m14 4 4 4-4 4"/><path d="M20 16H6"/><path d="m10 12-4 4 4 4"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 0 1-15 5.5"/><path d="M3.5 12a8.5 8.5 0 0 1 15-5.5"/><path d="M18.5 2.5v4h-4"/><path d="M5.5 21.5v-4h4"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/><path d="M14.5 11.5v6M11.5 14.5h6"/></symbol>
   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20.5 20.5-4.5-4.5"/></symbol>
   <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
   <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
@@ -287,7 +285,6 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   <symbol id="i-chat" viewBox="0 0 24 24"><path d="M20.5 12a8 8 0 0 1-11.8 7L3.5 20.5 5 15.6A8 8 0 1 1 20.5 12z"/><path d="M8.5 10.5h7M8.5 13.5h4.5"/></symbol>
   <symbol id="i-rocket" viewBox="0 0 24 24"><path d="M5 19c0-3 1-5 3-6l3 3c-1 2-3 3-6 3z"/><path d="M14.5 4.5c2.5-1 5-1 5-1s0 2.5-1 5L12 15l-3-3z"/><circle cx="15.5" cy="8.5" r="1.3"/></symbol>
   <symbol id="i-phoneapp" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
-  <symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-5h6v5"/><path d="M9 11h.01M15 11h.01"/></symbol>
 </svg>
 
 <div class="shell">
@@ -315,7 +312,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
       <form class="search" id="search" role="search" autocomplete="off">
         <svg class="i" aria-hidden="true"><use href="#i-search"/></svg>
         <label class="sr" for="q">Tìm kiếm thủ tục</label>
-        <input id="q" type="search" placeholder="Tìm: đăng ký xe, VNeID, lưu trú…" enterkeyhint="search"/>
+        <input id="q" type="search" placeholder="Tìm: sang tên, cấp đổi, biển số, GPLX…" enterkeyhint="search"/>
         <button type="submit">Tìm</button>
       </form>
       <div class="search-empty" id="searchEmpty" role="status">
@@ -324,14 +321,12 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
       </div>
 
       <ul class="tiles" id="tiles">
-        <li><a class="tile" href="#c1" data-id="c1"><span class="n">01</span><span class="ic"><svg class="i"><use href="#i-bike"/></svg></span>Đăng ký xe lần đầu</a></li>
-        <li><a class="tile" href="#c2" data-id="c2"><span class="n">02</span><span class="ic"><svg class="i"><use href="#i-id"/></svg></span>Kích hoạt VNeID Mức 2</a></li>
-        <li><a class="tile" href="#c3" data-id="c3"><span class="n">03</span><span class="ic"><svg class="i"><use href="#i-bed"/></svg></span>Thông báo lưu trú</a></li>
-        <li><a class="tile" href="#c4" data-id="c4"><span class="n">04</span><span class="ic"><svg class="i"><use href="#i-home"/></svg></span>Thường trú / Tạm trú</a></li>
-        <li><a class="tile" href="#c5" data-id="c5"><span class="n">05</span><span class="ic"><svg class="i"><use href="#i-layers"/></svg></span>Tích hợp GPLX, BHYT</a></li>
-        <li><a class="tile" href="#c6" data-id="c6"><span class="n">06</span><span class="ic"><svg class="i"><use href="#i-undo"/></svg></span>Thu hồi đăng ký, biển số xe</a></li>
-        <li><a class="tile" href="#c7" data-id="c7"><span class="n">07</span><span class="ic"><svg class="i"><use href="#i-filecheck"/></svg></span>Xác nhận thông tin cư trú</a></li>
-        <li><a class="tile alt" href="lichtiepdan.html" data-keywords="lịch tiếp công dân giờ làm việc thời gian làm việc thứ hai thứ ba căn cước"><span class="ic"><svg class="i"><use href="#i-cal"/></svg></span>Lịch tiếp công dân</a></li>
+        <li><a class="tile" href="#dang-ky-lan-dau" data-id="dang-ky-lan-dau"><span class="n">01</span><span class="ic"><svg class="i"><use href="#i-bike"/></svg></span>Đăng ký xe lần đầu</a></li>
+        <li><a class="tile" href="#sang-ten" data-id="sang-ten"><span class="n">02</span><span class="ic"><svg class="i"><use href="#i-swap"/></svg></span>Đăng ký sang tên xe</a></li>
+        <li><a class="tile" href="#cap-doi" data-id="cap-doi"><span class="n">03</span><span class="ic"><svg class="i"><use href="#i-refresh"/></svg></span>Cấp đổi đăng ký xe, biển số</a></li>
+        <li><a class="tile" href="#cap-lai" data-id="cap-lai"><span class="n">04</span><span class="ic"><svg class="i"><use href="#i-copy"/></svg></span>Cấp lại đăng ký xe, biển số</a></li>
+        <li><a class="tile" href="#thu-hoi" data-id="thu-hoi"><span class="n">05</span><span class="ic"><svg class="i"><use href="#i-undo"/></svg></span>Thu hồi đăng ký xe, biển số</a></li>
+        <li><a class="tile" href="#gplx" data-id="gplx"><span class="n">06</span><span class="ic"><svg class="i"><use href="#i-id"/></svg></span>Cấp Giấy phép lái xe</a></li>
       </ul>
     </nav>
 
@@ -343,7 +338,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
       </div>
 
       <!-- THỦ TỤC 1 -->
-      <article class="proc" id="c1">
+      <article class="proc" id="dang-ky-lan-dau">
         <header class="proc-head">
           <span class="ic"><svg class="i"><use href="#i-bike"/></svg></span>
           <div>
@@ -391,184 +386,157 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
       </article>
 
       <!-- THỦ TỤC 2 -->
-      <article class="proc" id="c2">
+      <article class="proc" id="sang-ten">
         <header class="proc-head">
-          <span class="ic"><svg class="i"><use href="#i-id"/></svg></span>
+          <span class="ic"><svg class="i"><use href="#i-swap"/></svg></span>
           <div>
-            <p class="kicker">Thủ tục 02 · Định danh điện tử</p>
-            <h2>Kích hoạt tài khoản VNeID Mức 2</h2>
+            <p class="kicker">Thủ tục 02 · Đăng ký xe</p>
+            <h2>Đăng ký sang tên xe mô tô, xe gắn máy</h2>
           </div>
         </header>
-        <ul class="chips"><li>Ứng dụng VNeID</li><li>Kích hoạt ngay khi nhận SMS phê duyệt</li></ul>
-        <p class="lead">Tự kích hoạt tài khoản định danh Mức 2 trên điện thoại sau khi đã thu nhận sinh trắc học tại cơ quan Công an.</p>
-        <button class="video" type="button" data-url="https://www.youtube.com/embed/q7DYW9JmPp8?rel=0"><span class="play"><svg class="i"><use href="#i-play"/></svg></span><span><b>Video hướng dẫn</b><small>Chạm để xem video hướng dẫn bằng Tiếng Việt</small></span></button>
+        <ul class="chips"><li>Trực tuyến một phần hoặc trực tiếp</li><li>Giữ nguyên biển số định danh</li><li>Trả kết quả ≤ 02 ngày</li></ul>
+        <p class="lead">Khi mua, được tặng cho, thừa kế… xe mô tô, xe gắn máy, thủ tục gồm <b>hai phần</b>: chủ xe cũ làm thủ tục <b>thu hồi</b> chứng nhận đăng ký xe, biển số; sau đó chủ xe mới làm thủ tục <b>đăng ký sang tên</b>. Chủ xe mới kê khai trên Cổng Dịch vụ công và đưa xe đến cơ quan đăng ký để kiểm tra.</p>
         <div class="cols">
           <section class="block">
             <h3><span class="num">1</span>Hồ sơ cần chuẩn bị</h3>
+            <h4>Chủ xe cũ (thu hồi)</h4>
             <ul class="checklist">
-              <li>Thẻ Căn cước công dân gắn chip hoặc Căn cước.</li>
-              <li>Số điện thoại chính chủ đang lắp trong máy.</li>
-              <li>Tin nhắn SMS chứa mã OTP gửi từ Bộ Công an (VNeID).</li>
+              <li>Giấy khai thu hồi chứng nhận đăng ký xe, biển số xe (kê khai trên Cổng Dịch vụ công).</li>
+              <li>Giấy tờ của chủ xe; 02 bản chà số máy, số khung của xe.</li>
+              <li>Chứng nhận đăng ký xe, biển số xe và bản sao chứng từ chuyển quyền sở hữu xe.</li>
+            </ul>
+            <h4>Chủ xe mới (đăng ký sang tên)</h4>
+            <ul class="checklist">
+              <li>Giấy khai đăng ký xe và giấy tờ của chủ xe mới.</li>
+              <li>Chứng từ chuyển quyền sở hữu xe (giấy bán, cho, tặng, thừa kế…) và chứng từ lệ phí trước bạ.</li>
+              <li>Chứng nhận thu hồi đăng ký xe, biển số xe (bản chính).</li>
             </ul>
           </section>
           <section class="block">
             <h3><span class="num">2</span>Các bước thực hiện</h3>
             <ol class="steps">
-              <li>Công dân mở ứng dụng VNeID sau khi nhận tin nhắn SMS phê duyệt từ cơ quan Công an, rồi bấm chọn mục <b>“Kích hoạt tài khoản định danh điện tử”</b>.</li>
-              <li>Nhập số định danh cá nhân, số điện thoại chính chủ và điền mã OTP nhận được từ tin nhắn SMS của Bộ Công an.</li>
-              <li>Thiết lập mật khẩu ứng dụng và mã Passcode gồm 6 chữ số để hoàn tất bảo mật tài khoản.</li>
+              <li>Chủ xe cũ kê khai giấy khai thu hồi trên Cổng Dịch vụ công, nộp hồ sơ và nhận giấy hẹn.</li>
+              <li>Cơ quan đăng ký xe kiểm tra hồ sơ và cấp <b>chứng nhận thu hồi</b> đăng ký xe, biển số xe.</li>
+              <li>Chủ xe mới kê khai giấy khai đăng ký xe trên Cổng Dịch vụ công, đưa xe đến cơ quan đăng ký để kiểm tra và nộp hồ sơ.</li>
+              <li>Cơ quan đăng ký xe kiểm tra hồ sơ, cấp biển số và thông báo lệ phí.</li>
+              <li>Chủ xe nộp lệ phí (có thể nộp trực tuyến) và nhận chứng nhận đăng ký xe, biển số tại cơ quan đăng ký hoặc qua bưu chính.</li>
             </ol>
           </section>
         </div>
         <section class="block">
-          <h3><span class="num">3</span>Lưu ý quan trọng</h3>
-          <div class="note"><b>Cảnh giác:</b> Không cung cấp mã OTP và mã Passcode cho người khác để phòng ngừa tội phạm lừa đảo.</div>
+          <h3><span class="num">3</span>Thời hạn &amp; lưu ý</h3>
+          <div class="note"><b>Thời hạn giải quyết:</b> Cấp chứng nhận thu hồi và chứng nhận đăng ký xe: không quá 02 ngày làm việc kể từ khi nhận đủ hồ sơ hợp lệ. Biển số định danh được giữ nguyên, cấp ngay sau khi tiếp nhận hồ sơ hợp lệ.</div>
+          <div class="note"><b>Lưu ý:</b> Trong <b>30 ngày</b> kể từ ngày làm giấy tờ chuyển quyền sở hữu, chủ xe đang đứng tên phải làm thủ tục thu hồi; quá hạn có thể bị xử phạt theo quy định.</div>
         </section>
         <section class="block">
-          <h3><span class="num">4</span>Thực hiện</h3>
+          <h3><span class="num">4</span>Thực hiện trực tuyến</h3>
           <div class="actions">
-            <a class="btn primary" href="https://universal.vneid.gov.vn/" rel="noopener noreferrer"><svg class="i"><use href="#i-phoneapp"/></svg>Mở VNeID</a>
-            <a class="btn secondary" href="#support" data-scroll="support"><svg class="i"><use href="#i-building"/></svg>Đến trụ sở hỗ trợ</a>
+            <a class="btn primary" href="https://dichvucong.bocongan.gov.vn" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-rocket"/></svg>Nộp hồ sơ ngay</a>
+            <a class="btn secondary" href="https://dichvucong.bocongan.gov.vn/bocongan/bothutuc/tthc?matt=35652" target="_blank" rel="noopener noreferrer">Hướng dẫn chi tiết<svg class="i"><use href="#i-ext"/></svg></a>
           </div>
         </section>
       </article>
 
       <!-- THỦ TỤC 3 -->
-      <article class="proc" id="c3">
+      <article class="proc" id="cap-doi">
         <header class="proc-head">
-          <span class="ic"><svg class="i"><use href="#i-bed"/></svg></span>
+          <span class="ic"><svg class="i"><use href="#i-refresh"/></svg></span>
           <div>
-            <p class="kicker">Thủ tục 03 · Cư trú</p>
-            <h2>Thông báo lưu trú qua VNeID</h2>
+            <p class="kicker">Thủ tục 03 · Đăng ký xe</p>
+            <h2>Cấp đổi chứng nhận đăng ký xe, biển số xe</h2>
           </div>
         </header>
-        <ul class="chips"><li>Ứng dụng VNeID</li><li>Xử lý trong 1 phút</li><li>Khai báo trước 23h</li></ul>
-        <p class="lead">Công dân tự khai báo khi có khách hoặc người thân từ nơi khác đến ở nhờ qua đêm qua ứng dụng VNeID.</p>
-        <button class="video" type="button" data-url="https://www.youtube.com/embed/AROi8n8l9Cc?rel=0"><span class="play"><svg class="i"><use href="#i-play"/></svg></span><span><b>Video hướng dẫn</b><small>Chạm để xem video hướng dẫn bằng Tiếng Việt</small></span></button>
+        <ul class="chips"><li>Trực tuyến một phần hoặc trực tiếp</li><li>Đổi chứng nhận ≤ 02 ngày</li><li>Đổi biển số ≤ 07 ngày</li></ul>
+        <p class="lead">Áp dụng khi chứng nhận đăng ký xe hoặc biển số <b>bị mờ, hỏng</b>; xe <b>cải tạo, thay đổi màu sơn</b>; <b>thay đổi thông tin</b> của chủ xe; chứng nhận đăng ký xe <b>hết hạn</b>; hoặc chủ xe có nhu cầu đổi biển ngắn sang biển dài (hoặc ngược lại).</p>
         <div class="cols">
           <section class="block">
-            <h3><span class="num">1</span>Thông tin cần chuẩn bị</h3>
+            <h3><span class="num">1</span>Hồ sơ cần chuẩn bị</h3>
             <ul class="checklist">
-              <li>Số Căn cước / Định danh cá nhân của người đến lưu trú.</li>
-              <li>Thời gian lưu trú (từ ngày... đến ngày...).</li>
-              <li>Lý do lưu trú (thăm thân, công tác, lao động...).</li>
+              <li>Giấy khai đăng ký xe (kê khai trên Cổng Dịch vụ công hoặc tại cơ quan đăng ký xe).</li>
+              <li>Giấy tờ của chủ xe.</li>
+              <li>Chứng nhận đăng ký xe hoặc biển số xe cũ (trường hợp đổi biển số thì nộp lại biển số).</li>
+              <li>Xe cải tạo: thêm giấy tờ về tổng thành máy, khung (nếu có thay thế) theo quy định.</li>
             </ul>
           </section>
           <section class="block">
             <h3><span class="num">2</span>Các bước thực hiện</h3>
             <ol class="steps">
-              <li>Công dân mở app VNeID, vào mục <b>“Thủ tục hành chính”</b>, chọn <b>“Thông báo lưu trú”</b> rồi tạo mới yêu cầu cho nhà ở của mình.</li>
-              <li>Dùng camera quét mã QR trên thẻ Căn cước của khách, điền thời gian lưu trú và bấm gửi (lưu ý khai báo trước 23 giờ đêm).</li>
+              <li>Kê khai giấy khai đăng ký xe trên Cổng Dịch vụ công, nhận mã hồ sơ và lịch hẹn.</li>
+              <li>Đến cơ quan đăng ký xe nộp hồ sơ và lệ phí. Trường hợp xe cải tạo, thay đổi màu sơn: <b>đưa xe đến để kiểm tra</b>.</li>
+              <li>Cơ quan đăng ký xe kiểm tra hồ sơ, cấp đổi chứng nhận đăng ký xe hoặc biển số xe.</li>
+              <li>Nhận kết quả tại cơ quan đăng ký xe hoặc qua dịch vụ bưu chính công ích.</li>
             </ol>
           </section>
         </div>
         <section class="block">
-          <h3><span class="num">3</span>Quy định thời gian</h3>
-          <div class="note">Thông báo trước 23 giờ thì giải quyết trong ngày; thông báo sau 23 giờ thì Công an tiếp nhận xử lý từ 08 giờ sáng hôm sau.</div>
+          <h3><span class="num">3</span>Thời hạn &amp; lưu ý</h3>
+          <div class="note"><b>Thời hạn giải quyết:</b> Đổi chứng nhận đăng ký xe: không quá 02 ngày làm việc. Đổi biển số xe: không quá 07 ngày làm việc. Tính từ khi nhận đủ hồ sơ hợp lệ và chủ xe đã nộp lệ phí.</div>
+          <div class="note"><b>Lưu ý:</b> Xe cải tạo hoặc thay đổi thông tin chủ xe thì trong <b>30 ngày</b> chủ xe phải đến làm thủ tục cấp đổi theo quy định.</div>
         </section>
         <section class="block">
           <h3><span class="num">4</span>Thực hiện trực tuyến</h3>
           <div class="actions">
-            <a class="btn primary" href="https://universal.vneid.gov.vn/" rel="noopener noreferrer"><svg class="i"><use href="#i-phoneapp"/></svg>Mở VNeID khai báo</a>
-            <a class="btn secondary" href="https://dichvucong.bocongan.gov.vn" target="_blank" rel="noopener noreferrer">Cổng Dịch vụ công<svg class="i"><use href="#i-ext"/></svg></a>
+            <a class="btn primary" href="https://dichvucong.bocongan.gov.vn" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-rocket"/></svg>Nộp hồ sơ ngay</a>
+            <a class="btn secondary" href="https://dichvucong.bocongan.gov.vn/bocongan/bothutuc/listThuTuc?tukhoa=c%E1%BA%A5p%20%C4%91%E1%BB%95i%20ch%E1%BB%A9ng%20nh%E1%BA%ADn%20%C4%91%C4%83ng%20k%C3%BD%20xe" target="_blank" rel="noopener noreferrer">Hướng dẫn chi tiết<svg class="i"><use href="#i-ext"/></svg></a>
           </div>
         </section>
       </article>
 
       <!-- THỦ TỤC 4 -->
-      <article class="proc" id="c4">
+      <article class="proc" id="cap-lai">
         <header class="proc-head">
-          <span class="ic"><svg class="i"><use href="#i-home"/></svg></span>
+          <span class="ic"><svg class="i"><use href="#i-copy"/></svg></span>
           <div>
-            <p class="kicker">Thủ tục 04 · Cư trú</p>
-            <h2>Đăng ký thường trú / Tạm trú trên VNeID</h2>
+            <p class="kicker">Thủ tục 04 · Đăng ký xe</p>
+            <h2>Cấp lại chứng nhận đăng ký xe, biển số xe</h2>
           </div>
         </header>
-        <ul class="chips"><li>Thực hiện trực tuyến trên VNeID</li><li>Tài khoản định danh điện tử Mức 2</li></ul>
-        <p class="lead">Công dân có thể thực hiện thủ tục đăng ký thường trú, đăng ký tạm trú trực tuyến trên ứng dụng VNeID bằng tài khoản định danh điện tử mức 2.</p>
-        <button class="video" type="button" data-url="https://www.youtube.com/embed/5SxvtdrBt0E?rel=0"><span class="play"><svg class="i"><use href="#i-play"/></svg></span><span><b>Video hướng dẫn</b><small>Chạm để xem video hướng dẫn bằng Tiếng Việt</small></span></button>
+        <ul class="chips"><li>Khi bị mất chứng nhận hoặc biển số</li><li>Có thể thực hiện toàn trình</li><li>Xác minh tối đa 30 ngày</li></ul>
+        <p class="lead">Áp dụng khi chủ xe <b>bị mất</b> chứng nhận đăng ký xe hoặc biển số xe. Cơ quan đăng ký xe cần thời gian xác minh trước khi cấp lại.</p>
         <div class="cols">
           <section class="block">
-            <h3><span class="num">1</span>Hồ sơ / thông tin cần chuẩn bị</h3>
+            <h3><span class="num">1</span>Hồ sơ cần chuẩn bị</h3>
             <ul class="checklist">
-              <li>Tài khoản VNeID định danh điện tử mức 2 đang hoạt động.</li>
-              <li>Thông tin cá nhân và thông tin về nơi ở/chủ hộ theo trường hợp đăng ký.</li>
-              <li>Các giấy tờ, tài liệu cần thiết theo yêu cầu của hồ sơ.</li>
+              <li>Giấy khai đăng ký xe (kê khai trên Cổng Dịch vụ công hoặc tại cơ quan đăng ký xe).</li>
+              <li>Giấy tờ của chủ xe.</li>
+              <li>Bản chà số máy, số khung của xe.</li>
+              <li>Chứng nhận đăng ký xe hoặc biển số còn lại (nếu chỉ mất một trong hai).</li>
             </ul>
           </section>
           <section class="block">
-            <h3><span class="num">2</span>Các bước thực hiện trên VNeID</h3>
+            <h3><span class="num">2</span>Các bước thực hiện</h3>
+            <h4>Trực tuyến toàn trình</h4>
             <ol class="steps">
-              <li>Mở ứng dụng VNeID → đăng nhập bằng tài khoản định danh điện tử mức 2.</li>
-              <li>Chọn <b>“Thủ tục hành chính”</b> → chọn <b>“Đăng ký thường trú”</b> hoặc <b>“Đăng ký tạm trú”</b> tùy nhu cầu → nhập mã Passcode.</li>
-              <li>Chọn <b>“Tạo mới yêu cầu”</b> → chọn nội dung đăng ký tùy nhu cầu.</li>
-              <li>Nhập thông tin cá nhân, thông tin nơi cư trú/chủ hộ và các thông tin theo hướng dẫn trên ứng dụng.</li>
-              <li>Đính kèm các giấy tờ, tài liệu cần thiết theo yêu cầu và kiểm tra lại thông tin.</li>
-              <li>Chọn <b>“Tiếp tục”</b>, kiểm tra lại và gửi yêu cầu; theo dõi tình trạng giải quyết trên VNeID.</li>
+              <li>Kê khai giấy khai đăng ký xe trên Cổng Dịch vụ công.</li>
+              <li>Gửi bản chà số máy, số khung cho cơ quan đăng ký xe qua dịch vụ bưu chính theo hướng dẫn.</li>
+              <li>Nộp lệ phí trực tuyến và nhận kết quả qua bưu chính.</li>
+            </ol>
+            <h4>Trực tuyến một phần hoặc trực tiếp</h4>
+            <ol class="steps">
+              <li>Kê khai trên Cổng Dịch vụ công hoặc trực tiếp tại cơ quan đăng ký xe.</li>
+              <li>Nộp hồ sơ và lệ phí theo quy định; nhận kết quả tại cơ quan đăng ký hoặc qua bưu chính.</li>
             </ol>
           </section>
         </div>
         <section class="block">
-          <h3><span class="num">3</span>Lưu ý</h3>
-          <div class="note">Thực hiện đúng thủ tục tương ứng với nhu cầu <b>“Đăng ký thường trú”</b> hoặc <b>“Đăng ký tạm trú”</b> trên VNeID; thông tin và hồ sơ có thể khác nhau.</div>
+          <h3><span class="num">3</span>Thời hạn giải quyết</h3>
+          <div class="note">Cơ quan đăng ký xe xác minh trong <b>30 ngày</b> kể từ khi nhận đủ hồ sơ hợp lệ (thời gian xác minh không tính vào thời hạn giải quyết). Sau đó: cấp lại chứng nhận đăng ký xe không quá <b>02 ngày làm việc</b>; cấp lại biển số không quá <b>07 ngày làm việc</b>.</div>
         </section>
         <section class="block">
           <h3><span class="num">4</span>Thực hiện trực tuyến</h3>
           <div class="actions">
-            <a class="btn primary" href="https://universal.vneid.gov.vn/" rel="noopener noreferrer"><svg class="i"><use href="#i-phoneapp"/></svg>Mở VNeID</a>
-            <a class="btn secondary" href="https://dichvucong.bocongan.gov.vn" target="_blank" rel="noopener noreferrer">Cổng Dịch vụ công<svg class="i"><use href="#i-ext"/></svg></a>
+            <a class="btn primary" href="https://dichvucong.bocongan.gov.vn" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-rocket"/></svg>Nộp hồ sơ ngay</a>
+            <a class="btn secondary" href="https://dichvucong.bocongan.gov.vn/bocongan/bothutuc/listThuTuc?tukhoa=c%E1%BA%A5p%20l%E1%BA%A1i%20ch%E1%BB%A9ng%20nh%E1%BA%ADn%20%C4%91%C4%83ng%20k%C3%BD%20xe" target="_blank" rel="noopener noreferrer">Hướng dẫn chi tiết<svg class="i"><use href="#i-ext"/></svg></a>
           </div>
         </section>
       </article>
 
       <!-- THỦ TỤC 5 -->
-      <article class="proc" id="c5">
-        <header class="proc-head">
-          <span class="ic"><svg class="i"><use href="#i-layers"/></svg></span>
-          <div>
-            <p class="kicker">Thủ tục 05 · Ví giấy tờ</p>
-            <h2>Tích hợp GPLX và Bảo hiểm y tế vào VNeID</h2>
-          </div>
-        </header>
-        <ul class="chips"><li>Ứng dụng VNeID</li><li>Hệ thống đối soát dữ liệu 1 – 3 ngày</li></ul>
-        <p class="lead">Tự quét và gửi yêu cầu đưa Giấy phép lái xe và Thẻ Bảo hiểm y tế vào “Ví giấy tờ” trên app VNeID.</p>
-        <button class="video" type="button" data-url="https://www.youtube.com/embed/eSjmYsvxqHA?rel=0"><span class="play"><svg class="i"><use href="#i-play"/></svg></span><span><b>Video hướng dẫn</b><small>Chạm để xem video hướng dẫn bằng Tiếng Việt</small></span></button>
-        <div class="cols">
-          <section class="block">
-            <h3><span class="num">1</span>Hồ sơ cần chuẩn bị</h3>
-            <ul class="checklist">
-              <li>Tài khoản VNeID Mức 2 đang hoạt động.</li>
-              <li>Giấy phép lái xe bản cứng (chất liệu thẻ PET có số định danh).</li>
-              <li>Thẻ Bảo hiểm y tế giấy còn hạn sử dụng.</li>
-            </ul>
-          </section>
-          <section class="block">
-            <h3><span class="num">2</span>Các bước thực hiện</h3>
-            <ol class="steps">
-              <li>Công dân mở app VNeID, vào mục <b>“Ví giấy tờ”</b>, chọn <b>“Tích hợp thông tin”</b> rồi bấm <b>“Tạo mới yêu cầu”</b>.</li>
-              <li>Chọn loại giấy tờ cần tích hợp (GPLX hoặc BHYT), nhập chính xác số thẻ và bấm gửi chờ đối soát từ 1 đến 3 ngày.</li>
-            </ol>
-          </section>
-        </div>
-        <section class="block">
-          <h3><span class="num">3</span>Lưu ý</h3>
-          <div class="note">Thời gian 1–3 ngày là dự kiến; kết quả thành công phụ thuộc vào dữ liệu lưu trữ từ ngành GTVT và Bảo hiểm xã hội.</div>
-        </section>
-        <section class="block">
-          <h3><span class="num">4</span>Thực hiện trực tuyến</h3>
-          <div class="actions">
-            <a class="btn primary" href="https://universal.vneid.gov.vn/" rel="noopener noreferrer"><svg class="i"><use href="#i-phoneapp"/></svg>Mở Ví giấy tờ</a>
-            <a class="btn secondary" href="https://dichvucong.bocongan.gov.vn" target="_blank" rel="noopener noreferrer">Cổng Dịch vụ công<svg class="i"><use href="#i-ext"/></svg></a>
-          </div>
-        </section>
-      </article>
-
-      <!-- THỦ TỤC 6 -->
-      <article class="proc" id="c6">
+      <article class="proc" id="thu-hoi">
         <header class="proc-head">
           <span class="ic"><svg class="i"><use href="#i-undo"/></svg></span>
           <div>
-            <p class="kicker">Thủ tục 06 · Đăng ký xe</p>
+            <p class="kicker">Thủ tục 05 · Đăng ký xe</p>
             <h2>Thu hồi chứng nhận đăng ký xe, biển số xe mô tô, xe gắn máy</h2>
           </div>
         </header>
@@ -611,48 +579,48 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
         </section>
       </article>
 
-      <!-- THỦ TỤC 7 -->
-      <article class="proc" id="c7">
+      <!-- THỦ TỤC 6 -->
+      <article class="proc" id="gplx">
         <header class="proc-head">
-          <span class="ic"><svg class="i"><use href="#i-filecheck"/></svg></span>
+          <span class="ic"><svg class="i"><use href="#i-id"/></svg></span>
           <div>
-            <p class="kicker">Thủ tục 07 · Cư trú</p>
-            <h2>Xác nhận thông tin về cư trú</h2>
+            <p class="kicker">Thủ tục 06 · Giấy phép lái xe</p>
+            <h2>Cấp Giấy phép lái xe (đổi, cấp lại)</h2>
           </div>
         </header>
-        <ul class="chips"><li>Thực hiện trực tuyến trên VNeID</li><li>Định danh điện tử Mức 2</li></ul>
-        <p class="lead">Công dân có thể gửi yêu cầu xác nhận thông tin về cư trú ngay trên ứng dụng VNeID, không cần đến trực tiếp cơ quan Công an nếu thực hiện trực tuyến.</p>
-        <button class="video" type="button" data-url="https://www.youtube.com/embed/0hggzttB7f8?rel=0"><span class="play"><svg class="i"><use href="#i-play"/></svg></span><span><b>Video hướng dẫn</b><small>Các bước gửi yêu cầu xác nhận thông tin cư trú trên VNeID</small></span></button>
+        <ul class="chips"><li>Trực tuyến hoặc tại Công an cấp xã</li><li>Đổi GPLX ≤ 2,5 ngày làm việc</li><li>Áp dụng từ 01/7/2026</li></ul>
+        <p class="lead">Công dân có thể nộp hồ sơ <b>đổi, cấp lại Giấy phép lái xe</b> trực tuyến trên Cổng Dịch vụ công hoặc trực tiếp tại điểm tiếp nhận của Công an cấp xã, Phòng Cảnh sát giao thông. Trường hợp <b>cấp mới</b> (học và sát hạch lái xe) thực hiện qua cơ sở đào tạo và kỳ sát hạch theo quy định.</p>
         <div class="cols">
           <section class="block">
-            <h3><span class="num">1</span>Hồ sơ / thông tin cần chuẩn bị</h3>
+            <h3><span class="num">1</span>Hồ sơ cần chuẩn bị</h3>
             <ul class="checklist">
-              <li>Tài khoản VNeID định danh điện tử mức 2.</li>
-              <li>Thông tin cá nhân và thông tin của chủ hộ thường trú nếu người đề nghị không phải là chủ hộ.</li>
-              <li>Nội dung, mục đích cần xác nhận để khai báo trong yêu cầu.</li>
+              <li>Thông tin Căn cước / Căn cước điện tử (tài khoản VNeID Mức 2 khi nộp trực tuyến).</li>
+              <li>Thông tin Giấy phép lái xe đang sử dụng.</li>
+              <li>Giấy khám sức khỏe (bản điện tử) nếu thuộc diện phải khám; hạng A1, A, B1 không yêu cầu khi đổi tương ứng.</li>
+              <li>Ảnh chân dung 3x4 nền trắng — nộp trực tuyến có thể dùng ảnh từ dữ liệu Căn cước; nộp trực tiếp được chụp ảnh tại nơi tiếp nhận.</li>
             </ul>
           </section>
           <section class="block">
-            <h3><span class="num">2</span>Các bước thực hiện</h3>
+            <h3><span class="num">2</span>Các bước thực hiện trực tuyến</h3>
             <ol class="steps">
-              <li>Mở ứng dụng VNeID, đăng nhập bằng tài khoản định danh điện tử mức 2.</li>
-              <li>Chọn <b>“Thủ tục hành chính”</b> → chọn <b>“Xác nhận thông tin về cư trú”</b> và nhập Passcode.</li>
-              <li>Chọn <b>“Tạo mới yêu cầu”</b> → <b>“Đề nghị xác nhận thông tin về cư trú cho bản thân”</b>.</li>
-              <li>Khai báo thông tin người đề nghị; nếu không phải chủ hộ thì khai đầy đủ thông tin chủ hộ theo yêu cầu.</li>
-              <li>Chọn trường hợp xác nhận phù hợp, nhập nội dung đề nghị và chọn <b>“Tiếp tục”</b>.</li>
-              <li>Chọn hình thức nhận kết quả, kiểm tra lại thông tin và gửi yêu cầu.</li>
+              <li>Đăng nhập Cổng Dịch vụ công bằng tài khoản VNeID Mức 2, chọn thủ tục <b>đổi</b> hoặc <b>cấp lại</b> Giấy phép lái xe.</li>
+              <li>Kiểm tra thông tin Căn cước, GPLX và nơi cư trú do hệ thống tự hiển thị.</li>
+              <li>Xác thực giấy khám sức khỏe (nếu cần), tải ảnh chân dung và giấy tờ theo yêu cầu.</li>
+              <li>Chọn hình thức nhận kết quả, nhập số điện thoại, email chính xác rồi gửi hồ sơ.</li>
+              <li>Nộp lệ phí khi hệ thống thông báo và theo dõi trạng thái hồ sơ. GPLX mới được cập nhật trên VNeID.</li>
             </ol>
           </section>
         </div>
         <section class="block">
-          <h3><span class="num">3</span>Thời hạn giải quyết</h3>
-          <div class="note">Không quá <b>1/2 ngày làm việc</b> nếu thông tin cần xác nhận đã có trong Cơ sở dữ liệu quốc gia về dân cư; không quá <b>03 ngày làm việc</b> nếu thông tin cần xác nhận chưa có và phải xác minh.</div>
+          <h3><span class="num">3</span>Thời hạn &amp; lưu ý</h3>
+          <div class="note"><b>Thời hạn giải quyết (từ 01/7/2026):</b> Đổi GPLX, tích hợp dữ liệu: 01 ngày. Đổi GPLX, in và trả thẻ PET: 2,5 ngày làm việc kể từ khi nhận đủ hồ sơ hợp lệ.</div>
+          <div class="note"><b>GPLX quá hạn:</b> Dưới 30 ngày được đổi, không phải sát hạch lại. Từ 30 ngày đến dưới 01 năm: sát hạch lại lý thuyết. Từ 01 năm trở lên: sát hạch lại lý thuyết và thực hành.</div>
         </section>
         <section class="block">
           <h3><span class="num">4</span>Thực hiện trực tuyến</h3>
           <div class="actions">
-            <a class="btn primary" href="https://universal.vneid.gov.vn/" rel="noopener noreferrer"><svg class="i"><use href="#i-phoneapp"/></svg>Mở VNeID</a>
-            <a class="btn secondary" href="https://dichvucong.bocongan.gov.vn" target="_blank" rel="noopener noreferrer">Cổng Dịch vụ công<svg class="i"><use href="#i-ext"/></svg></a>
+            <a class="btn primary" href="https://dichvucong.gov.vn" target="_blank" rel="noopener noreferrer"><svg class="i"><use href="#i-rocket"/></svg>Nộp hồ sơ ngay</a>
+            <a class="btn secondary" href="https://universal.vneid.gov.vn/" rel="noopener noreferrer"><svg class="i"><use href="#i-phoneapp"/></svg>Mở VNeID</a>
           </div>
         </section>
       </article>
@@ -668,7 +636,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   <div class="extras">
     <section class="panel" aria-labelledby="faq-title">
       <h2 id="faq-title"><span class="ic"><svg class="i"><use href="#i-help"/></svg></span>Giải đáp nhanh</h2>
-      <p class="desc">Một số câu hỏi thường gặp về thủ tục và tiện ích trên VNeID.</p>
+      <p class="desc">Một số câu hỏi thường gặp về đăng ký xe và giấy phép lái xe.</p>
       <div class="faq-list" id="faqList"></div>
       <button class="more" id="faqMore" type="button">Xem thêm câu hỏi</button>
     </section>
@@ -700,7 +668,6 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
     <ul>
       <li><svg class="i"><use href="#i-pin"/></svg><span>04 Trần Hưng Đạo, xã M’Drắk, tỉnh Đắk Lắk</span></li>
       <li><svg class="i"><use href="#i-phone"/></svg><span>Điện thoại: <a href="tel:02623872299">0262.387.2299</a></span></li>
-      <li><svg class="i"><use href="#i-cal"/></svg><a href="lichtiepdan.html">Lịch tiếp công dân</a></li>
     </ul>
     <p class="copy">M’Drắk số · Dễ hiểu • Dễ làm • Dễ tiếp cận</p>
   </footer>
@@ -725,6 +692,11 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   let fromHome = false;
   let homeScroll = 0;
 
+  // Link cũ (mã QR đã in) dùng #c1, #c6
+  const legacy = {c1:'dang-ky-lan-dau', c6:'thu-hoi'};
+  const first = legacy[location.hash.slice(1)];
+  if (first) history.replaceState(null, '', '#' + first);
+
   function current(){
     const h = decodeURIComponent(location.hash.slice(1));
     return ids.includes(h) ? h : null;
@@ -732,7 +704,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 
   function render(scroll){
     const id = current();
-    const shown = id || (wide.matches ? 'c1' : null);
+    const shown = id || (wide.matches ? ids[0] : null);
     procs.forEach(p => p.classList.toggle('active', p.id === shown));
     tiles.forEach(t => t.setAttribute('aria-current', String(t.dataset.id === shown)));
     document.body.classList.toggle('has-proc', !!id);
@@ -846,28 +818,20 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
     {q:'Đăng ký xe lần đầu có thể thực hiện trực tuyến không?',a:'Có. DVC Bộ Công an có các thủ tục đăng ký xe lần đầu trực tuyến theo từng trường hợp.'},
     {q:'Đăng ký xe lần đầu trực tuyến cần VNeID Mức 2 không?',a:'Có, đối với thủ tục thực hiện trực tuyến toàn trình trên VNeID/DVC.'},
     {q:'Đăng ký xe lần đầu giải quyết trong bao lâu?',a:'Cấp chứng nhận đăng ký xe không quá 02 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ. Cấp biển số xe thực hiện ngay sau khi tiếp nhận hồ sơ hợp lệ; một số trường hợp đặc thù áp dụng thời hạn riêng.'},
-    {q:'Ô tô có thể đăng ký xe lần đầu trực tuyến không?',a:'Có. DVC Bộ Công an có thủ tục đăng ký xe lần đầu trực tuyến đối với ô tô và các loại xe thuộc phạm vi tương ứng.'},
-    {q:'Sau khi được cấp tài khoản VNeID Mức 2, kích hoạt như thế nào?',a:'Mở VNeID → Kích hoạt tài khoản định danh điện tử → nhập số định danh, số điện thoại → nhập OTP → đặt mật khẩu và Passcode.'},
-    {q:'Cần chuẩn bị gì để kích hoạt VNeID Mức 2?',a:'Số định danh cá nhân, số điện thoại đã đăng ký và mã OTP được gửi về điện thoại. Không cung cấp OTP hoặc Passcode cho người khác.'},
-    {q:'Phải thông báo lưu trú trước thời điểm nào?',a:'Thông báo trước 23 giờ của ngày bắt đầu lưu trú. Nếu đến lưu trú sau 23 giờ thì thông báo trước 08 giờ ngày hôm sau.'},
-    {q:'Thông báo lưu trú có mất lệ phí không?',a:'Không.'},
-    {q:'Sau khi gửi thông báo lưu trú, bao lâu được tiếp nhận?',a:'Thông tin được tiếp nhận ngay khi thực hiện thông báo.'},
-    {q:'Người thân đến ở nhiều lần có phải thông báo mỗi lần không?',a:'Đối với ông, bà, cha, mẹ, vợ, chồng, con, cháu, anh, chị, em ruột ở lại nhiều lần thì chỉ cần thông báo một lần theo quy định.'},
-    {q:'Đăng ký thường trú và đăng ký tạm trú có phải cùng một thủ tục không?',a:'Không. Đây là hai thủ tục khác nhau.'},
-    {q:'Đăng ký thường trú giải quyết trong bao lâu?',a:'07 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ.'},
-    {q:'Đăng ký tạm trú giải quyết trong bao lâu?',a:'03 ngày làm việc kể từ ngày nhận đủ hồ sơ hợp lệ.'},
-    {q:'Có thể đăng ký thường trú, tạm trú trực tuyến trên VNeID không?',a:'Có, thực hiện trực tuyến theo thủ tục tương ứng.'},
-    {q:'Hồ sơ đăng ký thường trú và tạm trú có giống nhau không?',a:'Không. Thành phần hồ sơ có thể khác nhau tùy từng trường hợp.'},
-    {q:'Có thể tích hợp giấy phép lái xe và thẻ BHYT vào VNeID không?',a:'Có. Thực hiện tại mục Ví giấy tờ → Tích hợp thông tin trên VNeID.'},
-    {q:'Sau khi gửi yêu cầu tích hợp, bao lâu có kết quả?',a:'M’Drắk số hướng dẫn thời gian dự kiến từ 1–3 ngày để hệ thống đối soát dữ liệu.'},
-    {q:'Những trường hợp nào có thể thực hiện thu hồi đăng ký xe, biển số xe?',a:'Như xe hết niên hạn, hư hỏng không sử dụng được, bị loại bỏ, bị mất/không tìm thấy hoặc chủ xe có yêu cầu thu hồi theo quy định.'},
-    {q:'Có thể thực hiện thu hồi đăng ký xe, biển số xe trực tuyến không?',a:'Có. Tùy trường hợp, thủ tục được thực hiện toàn trình hoặc một phần/trực tiếp.'},
-    {q:'Trường hợp nào có thể thực hiện thu hồi toàn trình?',a:'Các trường hợp thuộc phạm vi dịch vụ công trực tuyến toàn trình theo quy định, như xe hết niên hạn, hư hỏng không sử dụng được, bị loại bỏ, bị mất/không tìm thấy hoặc chủ xe yêu cầu thu hồi.'},
+    {q:'Mua xe cũ thì phải làm thủ tục gì?',a:'Chủ xe cũ làm thủ tục thu hồi chứng nhận đăng ký xe, biển số; sau đó chủ xe mới làm thủ tục đăng ký sang tên với chứng nhận thu hồi, chứng từ chuyển quyền sở hữu và chứng từ lệ phí trước bạ.'},
+    {q:'Bán xe thì sau bao lâu phải làm thủ tục thu hồi?',a:'Trong 30 ngày kể từ ngày làm giấy tờ chuyển quyền sở hữu, chủ xe đang đứng tên phải làm thủ tục thu hồi; quá hạn có thể bị xử phạt theo quy định.'},
+    {q:'Sang tên xe có phải đổi biển số không?',a:'Biển số định danh được giữ nguyên khi sang tên, trừ một số trường hợp đặc thù theo quy định.'},
+    {q:'Khi nào phải làm thủ tục cấp đổi chứng nhận đăng ký xe, biển số?',a:'Khi chứng nhận hoặc biển số bị mờ, hỏng; xe cải tạo, thay đổi màu sơn; thay đổi thông tin chủ xe; chứng nhận hết hạn; hoặc chủ xe muốn đổi biển ngắn sang biển dài (hoặc ngược lại).'},
+    {q:'Cấp đổi chứng nhận đăng ký xe, biển số mất bao lâu?',a:'Đổi chứng nhận đăng ký xe: không quá 02 ngày làm việc. Đổi biển số: không quá 07 ngày làm việc, kể từ khi nhận đủ hồ sơ hợp lệ và nộp lệ phí.'},
+    {q:'Bị mất giấy đăng ký xe thì làm thế nào?',a:'Làm thủ tục cấp lại chứng nhận đăng ký xe. Cơ quan đăng ký xe xác minh trong 30 ngày, sau đó cấp lại trong không quá 02 ngày làm việc.'},
+    {q:'Bị mất biển số xe thì cấp lại trong bao lâu?',a:'Sau thời gian xác minh, biển số được cấp lại trong không quá 07 ngày làm việc.'},
+    {q:'Những trường hợp nào có thể thực hiện thu hồi đăng ký xe, biển số xe?',a:'Như xe hết niên hạn, hư hỏng không sử dụng được, bị loại bỏ, bị mất/không tìm thấy, chuyển quyền sở hữu hoặc chủ xe có yêu cầu thu hồi theo quy định.'},
     {q:'Thời hạn giải quyết thu hồi đăng ký xe, biển số xe là bao lâu?',a:'Toàn trình: không quá 08 giờ làm việc. Một phần/trực tiếp: không quá 02 ngày làm việc. Một số trường hợp cụ thể có thời hạn riêng theo quy định.'},
     {q:'Bán, tặng cho hoặc chuyển nhượng xe có mặc nhiên là thu hồi toàn trình không?',a:'Không. Việc thu hồi được thực hiện theo hồ sơ tương ứng; sau khi hoàn tất thu hồi, chủ mới thực hiện thủ tục đăng ký sang tên.'},
-    {q:'Có thể yêu cầu xác nhận thông tin về cư trú trên VNeID không?',a:'Có. Người dân có thể thực hiện thủ tục trực tuyến trên VNeID.'},
-    {q:'Xác nhận thông tin về cư trú giải quyết trong bao lâu?',a:'Thông tin đã có trong Cơ sở dữ liệu quốc gia về dân cư: không quá 1/2 ngày làm việc. Thông tin chưa có và phải xác minh: không quá 03 ngày làm việc.'},
-    {q:'Xác nhận thông tin về cư trú có lệ phí không?',a:'Không.'}
+    {q:'Có thể đổi Giấy phép lái xe trực tuyến không?',a:'Có. Đăng nhập Cổng Dịch vụ công bằng tài khoản VNeID Mức 2 để nộp hồ sơ đổi, cấp lại GPLX; hoặc nộp trực tiếp tại điểm tiếp nhận của Công an cấp xã, Phòng Cảnh sát giao thông.'},
+    {q:'Đổi Giấy phép lái xe mất bao lâu?',a:'Từ 01/7/2026: đổi GPLX, tích hợp dữ liệu trong 01 ngày; đổi GPLX, in và trả thẻ PET trong 2,5 ngày làm việc.'},
+    {q:'Giấy phép lái xe hết hạn có phải thi lại không?',a:'Quá hạn dưới 30 ngày: được đổi, không phải sát hạch lại. Từ 30 ngày đến dưới 01 năm: sát hạch lại lý thuyết. Từ 01 năm trở lên: sát hạch lại lý thuyết và thực hành.'},
+    {q:'Đổi GPLX xe máy có cần giấy khám sức khỏe không?',a:'Hạng A1, A, B1 không yêu cầu giấy khám sức khỏe khi đổi GPLX tương ứng.'}
   ];
   const list = document.getElementById('faqList');
   const more = document.getElementById('faqMore');
