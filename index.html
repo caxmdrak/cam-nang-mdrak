@@ -103,6 +103,39 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 
 .disclaimer{margin:14px 2px 0;font-size:11.5px;color:var(--muted);text-align:center}
 
+/* ---------- TRỢ LÝ CHỌN NHANH ---------- */
+.wizard{margin:14px 0 0;padding:14px;border-radius:16px;background:var(--accent-soft);border:1px solid var(--accent-line)}
+.wizard-head{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:800}
+.wizard-head svg{font-size:19px;color:var(--accent-ink)}
+.wizard-step{display:none;margin-top:10px}
+.wizard-step.show{display:block}
+.wizard-q{margin:0 0 8px;font-size:13.5px;font-weight:600}
+.wizard-opts{display:grid;gap:7px}
+.wizard-opts.two{grid-template-columns:1fr 1fr}
+.wopt{display:flex;align-items:center;gap:9px;width:100%;padding:10px 12px;border:1.5px solid var(--line);border-radius:12px;background:var(--surface);text-align:left;font-size:13.5px;font-weight:600;line-height:1.35;cursor:pointer}
+.wopt:hover{border-color:var(--brand)}
+.wopt:active{transform:scale(.98)}
+.wopt svg{font-size:18px;color:var(--brand)}
+.wopt .go{margin-left:auto;color:var(--muted);font-size:15px}
+.wizard-back{margin-top:8px;border:0;background:none;padding:4px 0;font-size:12.5px;font-weight:700;color:var(--brand);cursor:pointer}
+
+/* ---------- CHECKLIST PROGRESS ---------- */
+.ck-hint{margin:-4px 0 10px;font-size:12.5px;color:var(--muted)}
+.ck-bar{margin-top:12px;padding:12px 14px;border-radius:14px;border:1px dashed var(--line);background:var(--surface)}
+.ck-top{display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13.5px;font-weight:700}
+.ck-count{flex:none;padding:2px 9px;border-radius:999px;background:var(--brand-soft);color:var(--brand);font-size:12.5px}
+.ck-track{height:6px;margin-top:9px;border-radius:99px;background:var(--surface-2);overflow:hidden}
+.ck-fill{height:100%;width:0;border-radius:99px;background:var(--brand-btn);transition:width .2s}
+.ck-note{margin:8px 0 0;font-size:11.5px;color:var(--muted)}
+.ck-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.ck-btn{display:inline-flex;align-items:center;gap:6px;padding:7px 12px;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);font-size:12.5px;font-weight:700;color:var(--ink);cursor:pointer}
+.ck-btn svg{font-size:15px;color:var(--brand)}
+.ck-status{font-size:12px;font-weight:700;color:var(--brand);align-self:center}
+
+/* ---------- KIỂM SOÁT NỘI DUNG ---------- */
+.meta{margin-top:22px;padding-top:14px;border-top:1px dashed var(--line);display:grid;gap:3px;font-size:12px;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:600}
+
 /* ---------- DETAIL ---------- */
 .detail{margin-top:16px}
 .topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;padding:10px 14px;padding-top:max(10px,env(safe-area-inset-top));background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
@@ -113,6 +146,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 
 .proc{display:none;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:20px 18px 22px;box-shadow:var(--shadow)}
 .proc.active{display:block;animation:fade .2s ease}
+.proc{scroll-margin-top:72px}
 @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .proc-head{display:flex;gap:14px;align-items:flex-start}
 .proc-head .ic{width:54px;height:54px;flex:none;border-radius:16px;display:grid;place-items:center;background:var(--brand-soft);color:var(--brand);font-size:28px}
@@ -135,8 +169,12 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 .block h4{margin:14px 0 6px;font-size:14px;font-weight:700;color:var(--brand)}
 
 .checklist{list-style:none;margin:0;padding:0;display:grid;gap:8px}
-.checklist li{position:relative;padding:11px 12px 11px 40px;border-radius:12px;background:var(--surface-2);border:1px solid var(--line);font-size:14px}
-.checklist li:before{content:"";position:absolute;left:13px;top:13px;width:16px;height:16px;border-radius:5px;background:var(--brand-btn) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/12px no-repeat}
+.checklist li{position:relative;padding:11px 12px 11px 42px;border-radius:12px;background:var(--surface-2);border:1px solid var(--line);font-size:14px;cursor:pointer;user-select:none;-webkit-user-select:none;transition:border-color .15s,background .15s}
+.checklist li:hover{border-color:var(--brand)}
+.checklist li:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.checklist li:before{content:"";position:absolute;left:12px;top:12px;width:19px;height:19px;border-radius:6px;border:2px solid var(--brand);background:var(--surface);transition:background .15s}
+.checklist li[aria-checked="true"]{background:var(--brand-soft);border-color:var(--brand)}
+.checklist li[aria-checked="true"]:before{border-color:var(--brand-btn);background:var(--brand-btn) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/13px no-repeat}
 
 .steps{list-style:none;margin:0;padding:0;counter-reset:s}
 .steps li{position:relative;counter-increment:s;padding:0 0 16px 42px;font-size:14px}
@@ -261,6 +299,16 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   .footer ul{margin:0;grid-template-columns:repeat(2,auto);justify-content:end;gap:8px 28px}
   .copy{grid-column:1/-1;margin:0}
 }
+@media print{
+  body{background:#fff}
+  .hero,.chooser,.extras,.footer,.topbar,.video,.actions,.ck-actions,.help,.modal{display:none!important}
+  .layout{display:block;margin:0}
+  .detail{display:block!important;margin:0!important}
+  .proc{box-shadow:none;border:0;padding:0}
+  .proc:not(.active){display:none!important}
+  .proc .cols{display:block}
+  .checklist li{break-inside:avoid}
+}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 </style>
 </head>
@@ -274,6 +322,8 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 8h14"/><path d="m14 4 4 4-4 4"/><path d="M20 16H6"/><path d="m10 12-4 4 4 4"/></symbol>
   <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20.5 12a8.5 8.5 0 0 1-15 5.5"/><path d="M3.5 12a8.5 8.5 0 0 1 15-5.5"/><path d="M18.5 2.5v4h-4"/><path d="M5.5 21.5v-4h4"/></symbol>
   <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/><path d="M14.5 11.5v6M11.5 14.5h6"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 24 24"><rect x="8" y="2.5" width="8" height="4" rx="1"/><path d="M16 4.5h2a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-13a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+  <symbol id="i-print" viewBox="0 0 24 24"><path d="M6 9V2.5h12V9"/><path d="M6 18H4.5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h15a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H18"/><rect x="6" y="14" width="12" height="7.5"/></symbol>
   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20.5 20.5-4.5-4.5"/></symbol>
   <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
   <symbol id="i-chev" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
@@ -320,6 +370,28 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
         <a id="searchPortal" href="https://dichvucong.bocongan.gov.vn" target="_blank" rel="noopener noreferrer">Tìm trên Cổng Dịch vụ công ↗</a>
       </div>
 
+      <div class="wizard" id="wizard">
+        <div class="wizard-head"><svg class="i" aria-hidden="true"><use href="#i-help"/></svg>Chưa biết chọn thủ tục nào?</div>
+        <div class="wizard-step show" data-step="1">
+          <p class="wizard-q">Bạn cần làm thủ tục về…</p>
+          <div class="wizard-opts two">
+            <button class="wopt" type="button" data-next="2"><svg class="i"><use href="#i-bike"/></svg>Xe mô tô, xe máy</button>
+            <button class="wopt" type="button" data-go="gplx" data-answer="gplx"><svg class="i"><use href="#i-id"/></svg>Giấy phép lái xe</button>
+          </div>
+        </div>
+        <div class="wizard-step" data-step="2">
+          <p class="wizard-q">Trường hợp của bạn là gì?</p>
+          <div class="wizard-opts">
+            <button class="wopt" type="button" data-go="dang-ky-lan-dau" data-answer="xe-moi">Mua xe mới, chưa có biển số<span class="go">›</span></button>
+            <button class="wopt" type="button" data-go="sang-ten" data-answer="mua-xe-cu">Mua, được cho, tặng, thừa kế xe đã có biển số<span class="go">›</span></button>
+            <button class="wopt" type="button" data-go="thu-hoi" data-answer="ban-xe">Bán, cho, tặng xe; xe hỏng, hết niên hạn<span class="go">›</span></button>
+            <button class="wopt" type="button" data-go="cap-doi" data-answer="mo-hong">Giấy đăng ký/biển số bị mờ, hỏng; đổi thông tin, cải tạo xe<span class="go">›</span></button>
+            <button class="wopt" type="button" data-go="cap-lai" data-answer="bi-mat">Bị mất giấy đăng ký hoặc biển số<span class="go">›</span></button>
+          </div>
+          <button class="wizard-back" type="button" data-back="1">‹ Chọn lại</button>
+        </div>
+      </div>
+
       <ul class="tiles" id="tiles">
         <li><a class="tile" href="#dang-ky-lan-dau" data-id="dang-ky-lan-dau"><span class="n">01</span><span class="ic"><svg class="i"><use href="#i-bike"/></svg></span>Đăng ký xe lần đầu</a></li>
         <li><a class="tile" href="#sang-ten" data-id="sang-ten"><span class="n">02</span><span class="ic"><svg class="i"><use href="#i-swap"/></svg></span>Đăng ký sang tên xe</a></li>
@@ -328,6 +400,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
         <li><a class="tile" href="#thu-hoi" data-id="thu-hoi"><span class="n">05</span><span class="ic"><svg class="i"><use href="#i-undo"/></svg></span>Thu hồi đăng ký xe, biển số</a></li>
         <li><a class="tile" href="#gplx" data-id="gplx"><span class="n">06</span><span class="ic"><svg class="i"><use href="#i-id"/></svg></span>Cấp Giấy phép lái xe</a></li>
       </ul>
+      <p class="disclaimer">M’Drắk số hỗ trợ tra cứu và chuẩn bị hồ sơ; không thay thế việc tiếp nhận, kiểm tra và giải quyết hồ sơ của cơ quan có thẩm quyền.</p>
     </nav>
 
     <!-- ===== CHI TIẾT THỦ TỤC ===== -->
@@ -352,6 +425,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
         <div class="cols">
           <section class="block">
             <h3><span class="num">1</span>Hồ sơ cần chuẩn bị</h3>
+            <p class="ck-hint">Chạm vào từng mục để đánh dấu những gì bạn đã chuẩn bị.</p>
             <ul class="checklist">
               <li>Tài khoản định danh điện tử từ VNeID Mức 2 của chủ xe.</li>
               <li>Thông tin, dữ liệu điện tử về nguồn gốc xe, hóa đơn và lệ phí trước bạ theo yêu cầu của hệ thống.</li>
@@ -383,6 +457,11 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
             <a class="btn secondary" href="https://dichvucong.bocongan.gov.vn/bocongan/bothutuc/tthc?matt=35676" target="_blank" rel="noopener noreferrer">Hướng dẫn chi tiết<svg class="i"><use href="#i-ext"/></svg></a>
           </div>
         </section>
+        <div class="meta">
+          <div><b>Cập nhật:</b> 16/10/2026</div>
+          <div><b>Căn cứ:</b> Thông tư 79/2024/TT-BCA của Bộ Công an, sửa đổi, bổ sung bởi Thông tư 51/2025/TT-BCA</div>
+          <div><b>Nguồn tra cứu:</b> Cổng Dịch vụ công Bộ Công an, Cổng Dịch vụ công Quốc gia</div>
+        </div>
       </article>
 
       <!-- THỦ TỤC 2 -->
@@ -399,6 +478,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
         <div class="cols">
           <section class="block">
             <h3><span class="num">1</span>Hồ sơ cần chuẩn bị</h3>
+            <p class="ck-hint">Chạm vào từng mục để đánh dấu những gì bạn đã chuẩn bị.</p>
             <h4>Chủ xe cũ (thu hồi)</h4>
             <ul class="checklist">
               <li>Giấy khai thu hồi chứng nhận đăng ký xe, biển số xe (kê khai trên Cổng Dịch vụ công).</li>
@@ -435,6 +515,11 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
             <a class="btn secondary" href="https://dichvucong.bocongan.gov.vn/bocongan/bothutuc/tthc?matt=35652" target="_blank" rel="noopener noreferrer">Hướng dẫn chi tiết<svg class="i"><use href="#i-ext"/></svg></a>
           </div>
         </section>
+        <div class="meta">
+          <div><b>Cập nhật:</b> 16/10/2026</div>
+          <div><b>Căn cứ:</b> Thông tư 79/2024/TT-BCA của Bộ Công an, sửa đổi, bổ sung bởi Thông tư 51/2025/TT-BCA</div>
+          <div><b>Nguồn tra cứu:</b> Cổng Dịch vụ công Bộ Công an, Cổng Dịch vụ công Quốc gia</div>
+        </div>
       </article>
 
       <!-- THỦ TỤC 3 -->
@@ -451,6 +536,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
         <div class="cols">
           <section class="block">
             <h3><span class="num">1</span>Hồ sơ cần chuẩn bị</h3>
+            <p class="ck-hint">Chạm vào từng mục để đánh dấu những gì bạn đã chuẩn bị.</p>
             <ul class="checklist">
               <li>Giấy khai đăng ký xe (kê khai trên Cổng Dịch vụ công hoặc tại cơ quan đăng ký xe).</li>
               <li>Giấy tờ của chủ xe.</li>
@@ -480,6 +566,11 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
             <a class="btn secondary" href="https://dichvucong.bocongan.gov.vn/bocongan/bothutuc/listThuTuc?tukhoa=c%E1%BA%A5p%20%C4%91%E1%BB%95i%20ch%E1%BB%A9ng%20nh%E1%BA%ADn%20%C4%91%C4%83ng%20k%C3%BD%20xe" target="_blank" rel="noopener noreferrer">Hướng dẫn chi tiết<svg class="i"><use href="#i-ext"/></svg></a>
           </div>
         </section>
+        <div class="meta">
+          <div><b>Cập nhật:</b> 16/10/2026</div>
+          <div><b>Căn cứ:</b> Thông tư 79/2024/TT-BCA của Bộ Công an, sửa đổi, bổ sung bởi Thông tư 51/2025/TT-BCA</div>
+          <div><b>Nguồn tra cứu:</b> Cổng Dịch vụ công Bộ Công an, Cổng Dịch vụ công Quốc gia</div>
+        </div>
       </article>
 
       <!-- THỦ TỤC 4 -->
@@ -496,6 +587,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
         <div class="cols">
           <section class="block">
             <h3><span class="num">1</span>Hồ sơ cần chuẩn bị</h3>
+            <p class="ck-hint">Chạm vào từng mục để đánh dấu những gì bạn đã chuẩn bị.</p>
             <ul class="checklist">
               <li>Giấy khai đăng ký xe (kê khai trên Cổng Dịch vụ công hoặc tại cơ quan đăng ký xe).</li>
               <li>Giấy tờ của chủ xe.</li>
@@ -529,6 +621,11 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
             <a class="btn secondary" href="https://dichvucong.bocongan.gov.vn/bocongan/bothutuc/listThuTuc?tukhoa=c%E1%BA%A5p%20l%E1%BA%A1i%20ch%E1%BB%A9ng%20nh%E1%BA%ADn%20%C4%91%C4%83ng%20k%C3%BD%20xe" target="_blank" rel="noopener noreferrer">Hướng dẫn chi tiết<svg class="i"><use href="#i-ext"/></svg></a>
           </div>
         </section>
+        <div class="meta">
+          <div><b>Cập nhật:</b> 16/10/2026</div>
+          <div><b>Căn cứ:</b> Thông tư 79/2024/TT-BCA của Bộ Công an, sửa đổi, bổ sung bởi Thông tư 51/2025/TT-BCA</div>
+          <div><b>Nguồn tra cứu:</b> Cổng Dịch vụ công Bộ Công an, Cổng Dịch vụ công Quốc gia</div>
+        </div>
       </article>
 
       <!-- THỦ TỤC 5 -->
@@ -546,6 +643,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
         <div class="cols">
           <section class="block">
             <h3><span class="num">1</span>Hồ sơ cần chuẩn bị</h3>
+            <p class="ck-hint">Chạm vào từng mục để đánh dấu những gì bạn đã chuẩn bị.</p>
             <ul class="checklist">
               <li><b>Thu hồi toàn trình:</b> kê khai giấy khai thu hồi trên Cổng Dịch vụ công và nộp chứng nhận đăng ký xe, biển số cho cơ quan đăng ký xe qua dịch vụ bưu chính theo hướng dẫn.</li>
               <li><b>Thu hồi một phần/trực tiếp:</b> chứng nhận đăng ký xe, biển số xe và các giấy tờ thuộc hồ sơ thu hồi theo từng trường hợp.</li>
@@ -577,6 +675,11 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
             <a class="btn secondary" href="https://dichvucong.bocongan.gov.vn/public/link-to/chi-tiet-thu-tuc?ma-thu-tuc=64170" target="_blank" rel="noopener noreferrer">Hướng dẫn chi tiết<svg class="i"><use href="#i-ext"/></svg></a>
           </div>
         </section>
+        <div class="meta">
+          <div><b>Cập nhật:</b> 16/10/2026</div>
+          <div><b>Căn cứ:</b> Thông tư 79/2024/TT-BCA của Bộ Công an, sửa đổi, bổ sung bởi Thông tư 51/2025/TT-BCA</div>
+          <div><b>Nguồn tra cứu:</b> Cổng Dịch vụ công Bộ Công an, Cổng Dịch vụ công Quốc gia</div>
+        </div>
       </article>
 
       <!-- THỦ TỤC 6 -->
@@ -593,6 +696,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
         <div class="cols">
           <section class="block">
             <h3><span class="num">1</span>Hồ sơ cần chuẩn bị</h3>
+            <p class="ck-hint">Chạm vào từng mục để đánh dấu những gì bạn đã chuẩn bị.</p>
             <ul class="checklist">
               <li>Thông tin Căn cước / Căn cước điện tử (tài khoản VNeID Mức 2 khi nộp trực tuyến).</li>
               <li>Thông tin Giấy phép lái xe đang sử dụng.</li>
@@ -623,6 +727,11 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
             <a class="btn secondary" href="https://universal.vneid.gov.vn/" rel="noopener noreferrer"><svg class="i"><use href="#i-phoneapp"/></svg>Mở VNeID</a>
           </div>
         </section>
+        <div class="meta">
+          <div><b>Cập nhật:</b> 16/10/2026</div>
+          <div><b>Căn cứ:</b> Thông tư 108/2026/TT-BCA của Bộ Công an (hiệu lực từ 01/7/2026)</div>
+          <div><b>Nguồn tra cứu:</b> Cổng Dịch vụ công Bộ Công an, Cổng Dịch vụ công Quốc gia</div>
+        </div>
       </article>
 
       <div class="help proc-help" id="support">
@@ -682,6 +791,8 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
 </div>
 
 <script>
+function track(name, params){ try { if (typeof gtag === 'function') gtag('event', name, params || {}); } catch (e) {} }
+
 /* ---------- Điều hướng thủ tục ---------- */
 (function(){
   const procs = [...document.querySelectorAll('.proc')];
@@ -726,7 +837,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
     fromHome = true;
     history.pushState(null, '', '#' + id);
     render(true);
-    if (typeof gtag === 'function') gtag('event', 'open_procedure', {procedure: id});
+    track('open_procedure', {procedure: id});
   }
 
   tiles.forEach(t => t.addEventListener('click', e => { e.preventDefault(); go(t.dataset.id); }));
@@ -746,6 +857,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   render(false);
   if (current() && !wide.matches) window.scrollTo(0, 0);
+  addEventListener('load', () => { if (current() && !wide.matches) window.scrollTo(0, 0); });
 
   window.mdrakGo = go;
 })();
@@ -781,6 +893,7 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
     const q = input.value.trim();
     if (!q) { filter(''); return; }
     const hits = filter(q);
+    track('search', {search_term: q, results: hits.length});
     if (hits.length) {
       input.blur();
       const a = hits[0].a;
@@ -789,6 +902,125 @@ svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:1.8;stroke
       window.open(portal.href, '_blank', 'noopener,noreferrer');
     }
   });
+})();
+
+/* ---------- Trợ lý chọn nhanh ---------- */
+(function(){
+  const w = document.getElementById('wizard');
+  const steps = [...w.querySelectorAll('.wizard-step')];
+  const show = n => steps.forEach(s => s.classList.toggle('show', s.dataset.step === String(n)));
+  w.addEventListener('click', e => {
+    const b = e.target.closest('button');
+    if (!b) return;
+    if (b.dataset.next) show(b.dataset.next);
+    if (b.dataset.back) show(b.dataset.back);
+    if (b.dataset.go) {
+      track('wizard_answer', {answer: b.dataset.answer, procedure: b.dataset.go});
+      window.mdrakGo(b.dataset.go);
+      show(1);
+    }
+  });
+})();
+
+/* ---------- Checklist tự kiểm tra ---------- */
+(function(){
+  const KEY = 'mdrak-checklist-v1';
+  let saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) {}
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(saved)); } catch (e) {} };
+
+  document.querySelectorAll('.proc').forEach(proc => {
+    const block = proc.querySelector('.ck-hint').closest('.block');
+    const items = [...block.querySelectorAll('.checklist li')];
+    const title = proc.querySelector('h2').textContent;
+    const state = saved[proc.id] || [];
+
+    const bar = document.createElement('div');
+    bar.className = 'ck-bar';
+    bar.innerHTML = '<div class="ck-top"><span class="ck-msg"></span><span class="ck-count"></span></div>' +
+      '<div class="ck-track"><div class="ck-fill"></div></div>' +
+      '<p class="ck-note">Đây chỉ là công cụ tự kiểm tra, không phải xác nhận hồ sơ đã đầy đủ hoặc hợp lệ.</p>' +
+      '<div class="ck-actions">' +
+        '<button class="ck-btn" type="button" data-act="copy"><svg class="i"><use href="#i-clip"/></svg>Sao chép danh mục</button>' +
+        '<button class="ck-btn" type="button" data-act="print"><svg class="i"><use href="#i-print"/></svg>In hướng dẫn</button>' +
+        '<button class="ck-btn" type="button" data-act="reset">Bỏ đánh dấu</button>' +
+        '<span class="ck-status" role="status" aria-live="polite"></span>' +
+      '</div>';
+    block.appendChild(bar);
+    const msg = bar.querySelector('.ck-msg'), count = bar.querySelector('.ck-count'),
+          fill = bar.querySelector('.ck-fill'), status = bar.querySelector('.ck-status');
+
+    function update(){
+      const done = items.filter(li => li.getAttribute('aria-checked') === 'true').length;
+      count.textContent = done + '/' + items.length;
+      fill.style.width = (items.length ? done / items.length * 100 : 0) + '%';
+      msg.textContent = done === items.length ? '✓ Đã chuẩn bị đủ các mục' : 'Còn ' + (items.length - done) + ' mục cần chuẩn bị';
+      saved[proc.id] = items.map(li => li.getAttribute('aria-checked') === 'true' ? 1 : 0);
+      save();
+      return done;
+    }
+    function toggle(li){
+      li.setAttribute('aria-checked', String(li.getAttribute('aria-checked') !== 'true'));
+      status.textContent = '';
+      const done = update();
+      track('checklist_toggle', {procedure: proc.id});
+      if (done === items.length) track('checklist_complete', {procedure: proc.id});
+    }
+
+    items.forEach((li, i) => {
+      li.setAttribute('role', 'checkbox');
+      li.setAttribute('tabindex', '0');
+      li.setAttribute('aria-checked', String(!!state[i]));
+      li.addEventListener('click', () => toggle(li));
+      li.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(li); } });
+    });
+    update();
+
+    bar.addEventListener('click', e => {
+      const b = e.target.closest('[data-act]');
+      if (!b) return;
+      if (b.dataset.act === 'reset') {
+        items.forEach(li => li.setAttribute('aria-checked', 'false'));
+        update(); status.textContent = '';
+      } else if (b.dataset.act === 'print') {
+        track('checklist_print', {procedure: proc.id});
+        window.print();
+      } else if (b.dataset.act === 'copy') {
+        const text = 'M’DRẮK SỐ – DANH MỤC TỰ KIỂM TRA\n' + title + '\n\n' +
+          items.map(li => (li.getAttribute('aria-checked') === 'true' ? '[x] ' : '[ ] ') + li.textContent.trim()).join('\n') +
+          '\n\n' + location.origin + location.pathname + '#' + proc.id;
+        copy(text).then(() => { status.textContent = '✓ Đã sao chép'; track('checklist_copy', {procedure: proc.id}); })
+                  .catch(() => { status.textContent = 'Không sao chép được, hãy dùng nút In.'; });
+      }
+    });
+  });
+
+  function copy(text){
+    if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text);
+    return new Promise((ok, fail) => {
+      const ta = document.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.left = '-9999px';
+      document.body.appendChild(ta); ta.select();
+      let done = false; try { done = document.execCommand('copy'); } catch (e) {}
+      ta.remove(); done ? ok() : fail();
+    });
+  }
+})();
+
+/* ---------- Đo lường (Google Analytics) ---------- */
+(function(){
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a,button');
+    if (!a) return;
+    const proc = a.closest('.proc');
+    if (a.matches('.proc .btn.primary')) track('click_submit', {procedure: proc.id, link_url: a.href});
+    else if (a.matches('.proc .btn.secondary')) track('click_guide', {procedure: proc.id, link_url: a.href});
+    else if (a.matches('.video')) track('play_video', {procedure: proc ? proc.id : ''});
+    else if (a.matches('.faq-q') && !a.parentElement.classList.contains('open')) track('faq_open', {question: a.textContent.trim().slice(0, 100)});
+    else if (a.matches('.panel .btn.primary')) track('feedback_click', {});
+    else if (a.matches('.channel')) track('channel_click', {channel: a.querySelector('b').textContent});
+    else if (a.matches('a[href^="tel:"]')) track('call_click', {});
+  }, true);
 })();
 
 /* ---------- Video ---------- */
